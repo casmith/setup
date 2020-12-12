@@ -1,4 +1,0 @@
-for server in $(cat em-hostnames.txt); do
-	scp check-disk-space $server:/home/ubuntu
-	ssh $server 'sudo mv /home/ubuntu/check-disk-space /etc/cron.hourly; chmod 755 /etc/cron.hourly/check-disk-space'
-done;
